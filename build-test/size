@@ -1,0 +1,14 @@
+\begin{table}
+  \caption{\textbf{Image Sizes Using Two-stage Build}}
+  \label{tab:size}
+  \begin{tabular}{lccc}
+    \toprule
+    Applications&System&Base&AWS Lambda C++&RHINO \
+    \midrule
+    Numerical integration&Alpine&235MB&55.6MB&14.5MB\\
+    Libgrape-lite \cite{libgrape}&Alpine&849MB&306MBMB&74.3MB\\
+    WRF&Ubuntu&1.78GB&X&280.3MB\\
+    LAMMPS&Ubuntu&1.74GB&X&248.3MB\\
+  \bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --job-name=mpi_job
+#SBATCH --ntasks=32
+#SBATCH --array=1-12
+#SBATCH --output=mpi_job_%A_%a.out
+#SBATCH --error=mpi_job_%A_%a.err    
+
+
+LOG_FILE="job_time_${SLURM_ARRAY_TASK_ID}.log"
+
+
+echo "Job started at: $(date)" >> $LOG_FILE
+
+
+mpirun -np 32 ./ep.C.x
+
+echo "Job finished at: $(date)" >> $LOG_FILE
+
+
